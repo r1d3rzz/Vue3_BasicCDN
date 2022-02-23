@@ -8,12 +8,12 @@
     <title>Vue Cdn</title>
   </head>
   <body>
-    <h1>Hello</h1>
-
     <div id="app">
-      <h3>Book Name - {{title}}</h3>
-      <h3>Author Name - {{author}}</h3>
-      <h3>Age - {{age}}</h3>
+      <p>Book Name - {{title}}</p>
+      <p>Author Name - {{author}}</p>
+      <p>Age - {{age}}</p>
+      <button v-on:click="increaseAge">Increase Age</button>
+      <button v-on:click="author='Rider'">Change Author</button>
     </div>
 
     <script src="app.js"></script>

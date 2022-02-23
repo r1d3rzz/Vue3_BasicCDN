@@ -8,6 +8,12 @@ const app = Vue.createApp({
       age: 21,
     };
   },
+
+  methods: {
+    increaseAge() {
+      this.age++;
+    },
+  },
 });
 
 app.mount("#app");
