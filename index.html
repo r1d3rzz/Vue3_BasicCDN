@@ -9,22 +9,18 @@
   </head>
   <body>
     <div id="app">
-      <p>Book Name - {{title}}</p>
-      <p>Author Name - {{author}}</p>
-      <p>Age - {{age}}</p>
-      <button v-on:click="increaseAge">Increase Age</button>
-      <button v-on:click="author='Rider'">Change Author</button>
+      <h2>Book Libray</h2>
+      <div v-if="showBook">
+        <p>Book Name - {{title}}</p>
+        <p>Author Name - {{author}}</p>
+        <p>Age - {{age}}</p>
+      </div>
+      <button @click="showBook=!showBook">
+        <span v-if="showBook">Hide Book</span>
+        <span v-if="!showBook">Show Book</span>
+      </button>
     </div>
 
     <script src="app.js"></script>
   </body>
 </html>
-
-<!--
-    CDN name Convertion
-
-    unpkg.com/:package@:version/:file
-
-    eg.https://unpkg.com/vue@3.0.2
-
--->
