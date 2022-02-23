@@ -6,6 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://unpkg.com/vue@3.0.2"></script>
     <title>Vue Cdn</title>
+    <style>
+      .box {
+        padding: 30px;
+        text-align: center;
+        margin: 50px;
+        background-color: cyan;
+      }
+    </style>
   </head>
   <body>
     <div id="app">
@@ -19,6 +27,13 @@
         <span v-if="showBook">Hide Book</span>
         <span v-if="!showBook">Show Book</span>
       </button>
+
+      <!--mouseoverHandler($event,'Event') more than one add manually $event parameter-->
+      <div class="box" @mouseover="mouseoverHandler($event,'Event')">
+        mouse over
+      </div>
+      <div class="box" @mouseleave="mouseleaveHandler">mouse Leave</div>
+      <div class="box" @dblclick="doubleclickHandler">double click</div>
     </div>
 
     <script src="app.js"></script>
