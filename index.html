@@ -19,21 +19,18 @@
     <div id="app">
       <h2>Book Libray</h2>
       <div v-if="showBook">
-        <p>Book Name - {{title}}</p>
-        <p>Author Name - {{author}}</p>
-        <p>Age - {{age}}</p>
+        <div v-for="book in books">
+          <p>Book Name - {{book.title}}</p>
+          <p>Author Name - {{book.author}}</p>
+          <p>Age - {{book.age}}</p>
+          <p>Link - <a :href="book.link">Google</a></p>
+          <hr />
+        </div>
       </div>
       <button @click="showBook=!showBook">
         <span v-if="showBook">Hide Book</span>
         <span v-if="!showBook">Show Book</span>
       </button>
-
-      <!--mouseoverHandler($event,'Event') more than one add manually $event parameter-->
-      <div class="box" @mouseover="mouseoverHandler($event,'Event')">
-        mouse over
-      </div>
-      <div class="box" @mouseleave="mouseleaveHandler">mouse Leave</div>
-      <div class="box" @dblclick="doubleclickHandler">double click</div>
     </div>
 
     <script src="app.js"></script>

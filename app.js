@@ -3,9 +3,28 @@ const app = Vue.createApp({
 
   data() {
     return {
-      title: "This is Vue Js 3",
-      author: "Myint Thway Khine",
-      age: 21,
+      books: [
+        {
+          title: "Book 1",
+          author: "Mg Mg",
+          age: 21,
+          link: "https://www.google.com",
+        },
+
+        {
+          title: "Book 2",
+          author: "Kyaw Kyaw",
+          age: 25,
+          link: "https://www.google.com",
+        },
+
+        {
+          title: "Book 3",
+          author: "Tun Tun",
+          age: 50,
+          link: "https://www.google.com",
+        },
+      ],
       showBook: true,
     };
   },
@@ -13,18 +32,6 @@ const app = Vue.createApp({
   methods: {
     increaseAge() {
       this.age++;
-    },
-
-    mouseoverHandler(event, data) {
-      console.log("mouserover is working", "( Event " + event.type + ")", data);
-    },
-
-    mouseleaveHandler() {
-      console.log("mouseleave is working");
-    },
-
-    doubleclickHandler() {
-      console.log("doubleclick is working");
     },
   },
 });
