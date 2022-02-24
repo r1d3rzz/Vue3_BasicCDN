@@ -7,24 +7,27 @@
     <script src="https://unpkg.com/vue@3.0.2"></script>
     <title>Vue Cdn</title>
     <style>
-      .box {
-        padding: 30px;
-        text-align: center;
-        margin: 50px;
+      .isFav {
         background-color: cyan;
+      }
+      .box {
+        text-align: center;
       }
     </style>
   </head>
   <body>
     <div id="app">
       <h2>Book Libray</h2>
-      <div v-if="showBook">
+      <div v-if="showBook" class="box">
         <div v-for="book in books">
-          <p>Book Name - {{book.title}}</p>
-          <p>Author Name - {{book.author}}</p>
-          <p>Age - {{book.age}}</p>
-          <p>Link - <a :href="book.link">Google</a></p>
-          <hr />
+          <div :class="{isFav:book.isFav}">
+            <img :src="book.img" width="200" alt="" />
+            <p>Book Name - {{book.title}}</p>
+            <p>Author Name - {{book.author}}</p>
+            <p>Age - {{book.age}}</p>
+            <p>Link - <a :href="book.link">Google</a></p>
+            <hr />
+          </div>
         </div>
       </div>
       <button @click="showBook=!showBook">

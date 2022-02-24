@@ -9,6 +9,8 @@ const app = Vue.createApp({
           author: "Mg Mg",
           age: 21,
           link: "https://www.google.com",
+          img: "img/1.jpeg",
+          isFav: true,
         },
 
         {
@@ -16,6 +18,8 @@ const app = Vue.createApp({
           author: "Kyaw Kyaw",
           age: 25,
           link: "https://www.google.com",
+          img: "img/2.jpeg",
+          isFav: false,
         },
 
         {
@@ -23,6 +27,8 @@ const app = Vue.createApp({
           author: "Tun Tun",
           age: 50,
           link: "https://www.google.com",
+          img: "img/3.jpeg",
+          isFav: true,
         },
       ],
       showBook: true,
