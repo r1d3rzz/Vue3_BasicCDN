@@ -19,8 +19,8 @@
     <div id="app">
       <h2>Book Libray</h2>
       <div v-if="showBook" class="box">
-        <div v-for="book in books">
-          <div :class="{isFav:book.isFav}">
+        <div v-for="book in filteredBooks">
+          <div :class="{isFav:book.isFav}" @click="isFavHandler(book)">
             <img :src="book.img" width="200" alt="" />
             <p>Book Name - {{book.title}}</p>
             <p>Author Name - {{book.author}}</p>

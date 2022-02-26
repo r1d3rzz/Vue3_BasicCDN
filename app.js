@@ -39,6 +39,18 @@ const app = Vue.createApp({
     increaseAge() {
       this.age++;
     },
+
+    isFavHandler(book) {
+      book.isFav = !book.isFav;
+    },
+  },
+
+  computed: {
+    filteredBooks() {
+      return this.books.filter((book) => {
+        return book.isFav;
+      });
+    },
   },
 });
 
